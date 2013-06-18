@@ -11,7 +11,6 @@ public:
 	vector<_object*> objects;
 	point* _rayintersect(ray r,int& objectnum);
 	scenes(void);
-	~scenes(void);
 	color trace(ray r,int depth);
 };
 #endif

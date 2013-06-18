@@ -11,7 +11,7 @@ public:
 	double radius;
 	color ball_color;
 	
-	point* rayintersect(ray r,double& distance);
+	void rayintersect(point*p,ray r,double& distance);
 	ball(point p,double r,color c,bool is_light);
 	~ball(void);
 };

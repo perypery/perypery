@@ -42,7 +42,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		{
 			//ray ra(point(i,j,0),vector3(0,0,1));
 			ray ra(eye,vector3(i-eye_x,j-eye_y,-eye_z));
-			color c=scene.trace(ra,2);
+			color c=scene.trace(ra,1);
 			img.ptr<uchar>(i)[j*3]=c.number3;
 			img.ptr<uchar>(i)[j*3+1]=c.number2;
 			img.ptr<uchar>(i)[j*3+2]=c.number1;
