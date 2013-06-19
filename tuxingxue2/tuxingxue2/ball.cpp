@@ -12,7 +12,7 @@ ball::ball(point p,double r,color c,bool is_light)
 	this->is_light=is_light;
 }
 
-void ball::rayintersect(point* p,ray r,double& distance)//当返回的的确是个点的时候，distance是碰到的距离//distance是传入的最近距离，如果当前距离比这个距离要远，有交点就没有意义
+void ball::rayintersect(point*& p,ray r,double& distance)//当返回的的确是个点的时候，distance是碰到的距离//distance是传入的最近距离，如果当前距离比这个距离要远，有交点就没有意义
 {
 	double Loc=r.vertex.distance(center);//光线起点到距离
 	double tca=(center.x-r.vertex.x)*r.ray_vector.x+(center.y-r.vertex.y)*r.ray_vector.y+(center.z-r.vertex.z)*r.ray_vector.z;//光线起点到光线离球心最近点A的距离

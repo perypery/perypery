@@ -5,6 +5,8 @@
 #include"scenes.h"
 #include<iostream>
 #include"ball.h"
+#include<fstream>
+
 using namespace std;
 //double mx = 0, my = 0;
 //int dx = 0, dy = 0, horizBar_x = 0, vertiBar_y = 0;
@@ -28,7 +30,7 @@ int _tmain(int argc, _TCHAR* argv[])
 	point eye(eye_x,eye_y,eye_z);
 	camera cam(eye,display_x,display_y);//display_x,display_y);
 	scenes scene;
-	ball light1(point(10,200,10),50,color(255,255,0),true);
+	ball light1(point(10,200,10),5,color(255,255,0),true);
 	scene.lights.push_back(&light1);
 	ball ball1(point(240,240,200),100,color(0,0,0),false);
 	
@@ -42,6 +44,7 @@ int _tmain(int argc, _TCHAR* argv[])
 		{
 			//ray ra(point(i,j,0),vector3(0,0,1));
 			ray ra(eye,vector3(i-eye_x,j-eye_y,-eye_z));
+			*scene.fout<<"i="<<i<<" j="<<j;
 			color c=scene.trace(ra,1);
 			img.ptr<uchar>(i)[j*3]=c.number3;
 			img.ptr<uchar>(i)[j*3+1]=c.number2;
