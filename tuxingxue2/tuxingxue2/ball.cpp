@@ -12,8 +12,9 @@ ball::ball(point p,double r,color c,bool is_light)
 	this->is_light=is_light;
 }
 
-double ball::rayintersect(point& p,ray r)//µ±·µ»ØµÄµÄÈ·ÊÇ¸öµãµÄÊ±ºò£¬distanceÊÇÅöµ½µÄ¾àÀë//distanceÊÇ´«ÈëµÄ×î½ü¾àÀë£¬Èç¹ûµ±Ç°¾àÀë±ÈÕâ¸ö¾àÀëÒªÔ¶£¬ÓĞ½»µã¾ÍÃ»ÓĞÒâÒå
+double ball::rayintersect(point& p,ray r,vector3& N,color& c)//µ±·µ»ØµÄµÄÈ·ÊÇ¸öµãµÄÊ±ºò£¬distanceÊÇÅöµ½µÄ¾àÀë//distanceÊÇ´«ÈëµÄ×î½ü¾àÀë£¬Èç¹ûµ±Ç°¾àÀë±ÈÕâ¸ö¾àÀëÒªÔ¶£¬ÓĞ½»µã¾ÍÃ»ÓĞÒâÒå
 {
+	c=ball_color;
 	double Loc=r.vertex.distance(center);//¹âÏßÆğµãµ½¾àÀë
 	double tca=(center.x-r.vertex.x)*r.ray_vector.x+(center.y-r.vertex.y)*r.ray_vector.y+(center.z-r.vertex.z)*r.ray_vector.z;//¹âÏßÆğµãµ½¹âÏßÀëÇòĞÄ×î½üµãAµÄ¾àÀë
 	double thc2=radius*radius-Loc*Loc+tca*tca;//°ëÏÒ³¤µÄÆ½·½
@@ -25,6 +26,7 @@ double ball::rayintersect(point& p,ray r)//µ±·µ»ØµÄµÄÈ·ÊÇ¸öµãµÄÊ±ºò£¬distanceÊÇÅ
 	{
 		{
 			 p=point(r.vertex.x+t1*r.ray_vector.x,r.vertex.y+t1*r.ray_vector.y,r.vertex.z+t1*r.ray_vector.z);
+			 N=vector3(p.x-center.x,p.y-center.y,p.z-center.z);
 			 return t1;			
 		}
 	}
@@ -34,6 +36,7 @@ double ball::rayintersect(point& p,ray r)//µ±·µ»ØµÄµÄÈ·ÊÇ¸öµãµÄÊ±ºò£¬distanceÊÇÅ
 		if(t2>1e-2)//¹âÏßÔ´ÔÚÇòÄÚ£¬Ö»ÓĞÒ»¸ö½»µã
 		{
 			p=point(r.vertex.x+t2*r.ray_vector.x,r.vertex.y+t2*r.ray_vector.y,r.vertex.z+t2*r.ray_vector.z);
+			N=vector3(p.x-center.x,p.y-center.y,p.z-center.z);//Ó¦¸ÃÓÃ²»µ½
 			return t2;
 		}
 		else//¹âÏßÔ´ÔÚÇò±³Ãæ£¬Ã»ÓĞ½»µã
@@ -46,3 +49,4 @@ double ball::rayintersect(point& p,ray r)//µ±·µ»ØµÄµÄÈ·ÊÇ¸öµãµÄÊ±ºò£¬distanceÊÇÅ
 ball::~ball(void)
 {
 }
+	

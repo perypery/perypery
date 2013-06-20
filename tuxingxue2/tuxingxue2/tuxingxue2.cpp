@@ -7,7 +7,7 @@
 #include"ball.h"
 #include<fstream>
 #include<omp.h>
-
+#include"Floor.h"
 using namespace std;
 cv::Mat img; 
 //double mx = 0, my = 0;
@@ -18,13 +18,6 @@ cv::Mat img;
 #define eye_y 240
 #define eye_z -2000
 //img.ptr≈≈–Ú «bgr
-/*
-void paint(int i,int j,int a,int b,int c)
-{
-	img.ptr<uchar>(i)[j*3]=c;
-	img.ptr<uchar>(i)[j*3+1]=b;
-	img.ptr<uchar>(i)[j*3+2]=a;
-}*/
 void paint(int i,int j,color c)
 {
 	img.ptr<uchar>(i)[j*3]=c.number3;
@@ -41,21 +34,20 @@ int _tmain(int argc, _TCHAR* argv[])
 	point eye(eye_x,eye_y,eye_z);
 	camera cam(eye,display_x,display_y);//display_x,display_y);
 	scenes scene;
-	ball light1(point(200,20,3),5,color(255,255,255),true);
+	ball light1(point(20,240,30),5,color(255,255,255),true);
 	scene.lights.push_back(&light1);
-	ball ball1(point(130,130,200),50,color(255,0,0),false);
-	ball ball2(point(300,300,200),50,color(0,255,255),false);
+	ball ball1(point(240,170,200),50,color(255,0,0),false);
+	ball ball2(point(240,300,200),50,color(0,255,255),false);
+	Floor floor1(470,false);
 	scene.objects.push_back(&ball2);
 	scene.objects.push_back(&ball1);
 	scene.objects.push_back(&light1);
-	color** antialiase;
-	antialiase=new color*[display_x];
-	for(int i=0;i<display_x;i++)
-		antialiase[i]=new color[display_y];
-#pragma omp parallel for
+	scene.objects.push_back(&floor1);
+//#pragma omp parallel for
 	for(int i=0;i<display_x;i++)
 		for(int j=0;j<display_y;j++)
 		{
+			//paint(i,j,scene.trace(ray(eye,vector3(i-eye_x,j-eye_y,-eye_z)),2));
 			paint(i,j,(scene.trace(ray(eye,vector3(i-0.5-eye_x,j-0.5-eye_y,-eye_z)),2)
 				+scene.trace(ray(eye,vector3(i-0.5-eye_x,j+0.5-eye_y,-eye_z)),2)
 				+scene.trace(ray(eye,vector3(i-0.5-eye_x,j-eye_y,-eye_z)),2)
