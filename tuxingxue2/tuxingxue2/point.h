@@ -1,6 +1,8 @@
 #pragma once
 #ifndef _POINT_H
 #define _POINT_H
+#include<iostream>
+using namespace std;
 class point
 {
 public:
@@ -12,5 +14,6 @@ public:
 	double distance(point p1);
 	point(double a,double b,double c);
 	~point(void);
+	friend ostream& operator<<(ostream& output,point& p);
 };
 #endif

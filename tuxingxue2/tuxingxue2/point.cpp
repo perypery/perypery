@@ -24,3 +24,8 @@ point::point(double a,double b,double c)
 point::~point(void)
 {
 }
+ostream& operator<<(ostream& output,point& p)
+{
+	output<<"("<<p.x<<","<<p.y<<","<<p.z<<")";
+	return output;
+}

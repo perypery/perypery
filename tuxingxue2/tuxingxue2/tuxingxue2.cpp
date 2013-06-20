@@ -8,6 +8,7 @@
 #include<fstream>
 #include<omp.h>
 #include"Floor.h"
+#include"Triangle.h"
 using namespace std;
 cv::Mat img; 
 //double mx = 0, my = 0;
@@ -38,17 +39,21 @@ int _tmain(int argc, _TCHAR* argv[])
 	scene.lights.push_back(&light1);
 	ball ball1(point(240,170,200),50,color(255,0,0),false);
 	ball ball2(point(240,300,200),50,color(0,255,255),false);
+	Triangle t1(point(10,100,50),point(60,10,50),point(60,190,50),color(255,0,0),false);
 	Floor floor1(470,false);
 	scene.objects.push_back(&ball2);
 	scene.objects.push_back(&ball1);
 	scene.objects.push_back(&light1);
-	scene.objects.push_back(&floor1);
+	scene.objects.push_back(&t1);
+	//scene.objects.push_back(&floor1);
 //#pragma omp parallel for
 	for(int i=0;i<display_x;i++)
 		for(int j=0;j<display_y;j++)
 		{
-			//paint(i,j,scene.trace(ray(eye,vector3(i-eye_x,j-eye_y,-eye_z)),2));
-			paint(i,j,(scene.trace(ray(eye,vector3(i-0.5-eye_x,j-0.5-eye_y,-eye_z)),2)
+		//	std::cout<<"test";
+			*Triangle::fout2<<"i="<<i<<" j="<<j;
+			paint(i,j,scene.trace(ray(point(i,j,0),vector3(0,0,1)),2));
+			/*paint(i,j,(scene.trace(ray(eye,vector3(i-0.5-eye_x,j-0.5-eye_y,-eye_z)),2)
 				+scene.trace(ray(eye,vector3(i-0.5-eye_x,j+0.5-eye_y,-eye_z)),2)
 				+scene.trace(ray(eye,vector3(i-0.5-eye_x,j-eye_y,-eye_z)),2)
 				+scene.trace(ray(eye,vector3(i-eye_x,j+0.5-eye_y,-eye_z)),2)
@@ -56,7 +61,8 @@ int _tmain(int argc, _TCHAR* argv[])
 				+scene.trace(ray(eye,vector3(i-eye_x,j-0.5-eye_y,-eye_z)),2)
 				+scene.trace(ray(eye,vector3(i-eye_x,j-eye_y,-eye_z)),2)
 				+scene.trace(ray(eye,vector3(i+0.5-eye_x,j-0.5-eye_y,-eye_z)),2)
-				+scene.trace(ray(eye,vector3(i+0.5-eye_x,j+0.5-eye_y,-eye_z)),2))*(1.0/9));
+				+scene.trace(ray(eye,vector3(i+0.5-eye_x,j+0.5-eye_y,-eye_z)),2))*(1.0/9));*/
+			*t1.fout2<<endl;
 		}
 	//int a=0;
 	//cvCreateTrackbar("test","hah",&a,100);

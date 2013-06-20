@@ -25,10 +25,6 @@ double vector3::operator*(vector3 t)
 {
 	return x*t.x+y*t.y+z*t.z;
 }
-
-vector3::~vector3(void)
-{
-}
 ostream& operator<<(ostream& output,vector3& v)
 {
 	output<<v.x<<" "<<v.y<<" "<<v.z<<" ";
@@ -38,6 +34,14 @@ vector3 vector3::operator*(double t)
 {
 	return vector3(x*t,y*t,z*t);
 }
+vector3 vector3::operator-(vector3 t)
+{
+	return vector3(x-t.x,y-t.y,z-t.z);
+}
 vector3::vector3()
 {
+}
+vector3 vector3::cross(vector3 t)//可能有叉乘出的方向问题
+{
+	return vector3(y*t.z-z*t.y,z*t.x-x*t.z,x*t.y-y*t.x);
 }

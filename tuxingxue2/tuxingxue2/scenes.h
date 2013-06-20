@@ -8,7 +8,7 @@ using namespace std;
 class scenes
 {
 public:
-	ofstream* fout;
+	//ofstream* fout;
 	vector<ball*> lights;
 	vector<_object*> objects;
 	double _rayintersect(ray r,point& p,int& objectnum,vector3& N,color& c);

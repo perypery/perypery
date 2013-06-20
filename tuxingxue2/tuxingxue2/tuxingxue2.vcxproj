@@ -90,6 +90,7 @@
     <ClInclude Include="scenes.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Triangle.h" />
     <ClInclude Include="vector3.h" />
     <ClInclude Include="_object.h" />
   </ItemGroup>
@@ -98,6 +99,7 @@
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="color.cpp" />
     <ClCompile Include="floor.cpp" />
+    <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="_object.cpp" />
     <ClCompile Include="point.cpp" />
     <ClCompile Include="ray.cpp" />
