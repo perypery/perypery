@@ -34,8 +34,8 @@ int _tmain(int argc, _TCHAR* argv[])
 	scene.lights.push_back(&light1);
 	ball ball1(point(240,240,200),100,color(0,0,0),false);
 	
-	ball ball2(point(400,400,200),100,color(0,0,0),false);
-	scene.objects.push_back(&ball2);
+//	ball ball2(point(400,400,200),100,color(0,0,0),false);
+//	scene.objects.push_back(&ball2);
 	scene.objects.push_back(&ball1);
 	scene.objects.push_back(&light1);
 	for(int i=0;i<480;i++)

@@ -11,7 +11,7 @@ public:
 	ofstream* fout;
 	vector<ball*> lights;
 	vector<_object*> objects;
-	point* _rayintersect(ray r,int& objectnum);
+	double _rayintersect(ray r,point& p,int& objectnum);
 	scenes(void);
 	color trace(ray r,int depth);
 };

@@ -29,6 +29,11 @@ double vector3::operator*(vector3 t)
 vector3::~vector3(void)
 {
 }
+ostream& operator<<(ostream& output,vector3& v)
+{
+	output<<v.x<<" "<<v.y<<" "<<v.z<<" ";
+	return output;
+}
 vector3 vector3::operator*(double t)
 {
 	return vector3(x*t,y*t,z*t);
