@@ -1,6 +1,6 @@
 #include "StdAfx.h"
 #include "color.h"
-
+//using namespace std;
 
 color::color(double a,double b,double c)
 {
@@ -27,4 +27,9 @@ color::color()
 }
 color::~color(void)
 {
+}
+ostream& operator<<(ostream& output,color& v)
+{
+	output<<"("<<v.number1<<","<<v.number2<<","<<v.number3<<")";
+	return output;
 }

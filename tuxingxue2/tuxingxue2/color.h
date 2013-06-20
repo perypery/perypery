@@ -1,6 +1,8 @@
 #pragma once
 #ifndef _COLOR_H
 #define _COLOR_H
+#include<iostream>
+using namespace std;
 class color
 {
 public:
@@ -13,5 +15,6 @@ public:
 	color();
 	color(double a,double b,double c);
 	~color(void);
+	friend ostream& operator<<(ostream& output,color& c);
 };
 #endif

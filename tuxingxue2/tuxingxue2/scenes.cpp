@@ -3,12 +3,12 @@
 #include<iostream>
 #include<fstream>
 
-#define BACKGROUND_COLOR color(255,255,255)
+#define BACKGROUND_COLOR color(0,0,0)
 #define Ka 0.2     //±³¾°
 #define Kself 0.2   //×Ô¼ºÑÕÉ«
-//#define Kd 0.2   //Âþ·´Éä
-#define Kn 3    //¾µÃæ·´ÉäµÄn
-#define Ks 0.2  //¾µÃæ·´Éä
+#define Kd 0.2   //Âþ·´Éä
+#define Kn 8    //¾µÃæ·´ÉäµÄn
+#define Ks 0.4  //¾µÃæ·´Éä
 #define Kr 0.5  //·´ÉäµÄÏµÊý
 #define Kre 0.2  //ÕÛÉäµÄÏµÊý
 ofstream fout2("test");
@@ -59,7 +59,6 @@ double scenes::_rayintersect(ray r,point& p,int& objectnum)//·µ»Ø¹âÏßºÍ¶«Î÷ÃÇ×î½
 
 color scenes::trace(ray r,int depth)
 {
-
 	*fout<<" trace start ";
 	if(depth==0)
 		return color(0,0,0);
@@ -81,43 +80,41 @@ color scenes::trace(ray r,int depth)
 		return ((ball*)objects[objectnum])->ball_color;
 	}
 	color pointcolor=color(0,0,0);
-		
-
-//	if(pointtemp==NULL)
-//	{
-//		std::cout<<"wrong";
-//		exit(0);
-//	}
 	*fout<<" point: x="<<pointtemp.x<<" y="<<pointtemp.y<<" z="<<pointtemp.z;
 	vector3 N=vector3(pointtemp.x-((ball*)objects[objectnum])->center.x,pointtemp.y-((ball*)objects[objectnum])->center.y,pointtemp.z-((ball*)objects[objectnum])->center.z);
 	*fout<<" N= "<<N<<" ";
 	vector3 V=r.ray_vector*-1;//
-	*fout<<"V= "<<V<<endl;
-//	vector<ray>rays;
-	vector<vector3>L;
+	*fout<<"V= "<<V;
+	//vector<vector3>L;
 	//ÕâÊÇ²»¿¼ÂÇ±ÈÀýµÄ
-	color Ia=BACKGROUND_COLOR;
-	color selfcolor=((ball*)objects[objectnum])->ball_color;
+	color Ia=BACKGROUND_COLOR;//(255,255,0)
+	color selfcolor=((ball*)objects[objectnum])->ball_color;//(0,0,0,)
 	pointcolor=Ia*Ka+selfcolor*Kself;
+	*fout<<" 1.color="<<pointcolor;
 	for(int i=0;i<lights.size();i++)//ÓÐ¹âÏßµÄÊ±ºò£¬¿¼ÂÇÂþ·´ÉäºÍÕÛÉä 
 	{
 		ray raytemp=ray(pointtemp,lights[i]->center);
-		//rays.push_back(ray(*pointtemp,lights[i]->center));
-		L.push_back(raytemp.ray_vector);
+	//	L.push_back(raytemp.ray_vector);
 		int objectnumtemp=-1;
 		point pointtemptemp=point();
 		_rayintersect(raytemp,pointtemptemp,objectnumtemp);
-		//_rayintersect(raytemp,objectnumtemp);
+		*fout<<" objectnumtemp="<<objectnumtemp;
 		if(objects[objectnumtemp]->is_light)//Ã»ÓÐ±»µ²×¡
 		{
-			pointcolor=pointcolor+((ball*)objects[objectnum])->ball_color*(N*raytemp.ray_vector)*(0.9,0.1,0.1);
-			pointcolor=pointcolor+((ball*)objects[objectnum])->ball_color*(pow(raytemp.ray_vector.sym(N)*V,Kn))*Ks;
+			*fout<<" no dangzhu";
+			*fout<<" N*raytemp.ray_vector="<<N*raytemp.ray_vector;
+			pointcolor=pointcolor+((ball*)objects[objectnumtemp])->ball_color*(N*raytemp.ray_vector)*Kd;
+			*fout<<" 2.color="<<pointcolor;
+			pointcolor=pointcolor+((ball*)objects[objectnumtemp])->ball_color*(pow(raytemp.ray_vector.sym(N)*V,Kn))*Ks;
+			*fout<<" 3.color="<<pointcolor;
 		}
 		else
 		{
 
 		}
 	}
+	pointcolor=pointcolor+trace(ray(pointtemp,V.sym(N)),depth-1)*Kr;
 //	pointcolor=pointcolor+trace(ray(*pointtemp,V.sym(N)),depth-1)*Kr;
+	*fout<<endl;
 	return pointcolor;
 }

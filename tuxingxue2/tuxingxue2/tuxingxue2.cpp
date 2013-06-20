@@ -6,52 +6,66 @@
 #include<iostream>
 #include"ball.h"
 #include<fstream>
+#include<omp.h>
 
 using namespace std;
+cv::Mat img; 
 //double mx = 0, my = 0;
 //int dx = 0, dy = 0, horizBar_x = 0, vertiBar_y = 0;
 //bool clickVertiBar = false, clickHorizBar = false, needScroll = false;
 //CvRect rect_bar_horiz, rect_bar_verti;
 #define eye_x 240
 #define eye_y 240
-#define eye_z -200
+#define eye_z -2000
 //img.ptr排序是bgr
+/*
+void paint(int i,int j,int a,int b,int c)
+{
+	img.ptr<uchar>(i)[j*3]=c;
+	img.ptr<uchar>(i)[j*3+1]=b;
+	img.ptr<uchar>(i)[j*3+2]=a;
+}*/
+void paint(int i,int j,color c)
+{
+	img.ptr<uchar>(i)[j*3]=c.number3;
+	img.ptr<uchar>(i)[j*3+1]=c.number2;
+	img.ptr<uchar>(i)[j*3+2]=c.number1;
+}
 int _tmain(int argc, _TCHAR* argv[])
 {
-	double display_x,display_y;
-	//double eye_x,eye_y,eye_z,
-	//display_x和display_y都是480
-	//eye_x,eye_y,eye_z计划设定为240,240，-200
-	cv::Mat img; 
+	int display_x,display_y;
 	display_x=480;
 	display_y=480;
-	img.create(480, 480, CV_8UC3); 
+	img.create(display_x, display_y, CV_8UC3); 
 	img.setTo(cv::Scalar(255,255,255));
 	point eye(eye_x,eye_y,eye_z);
 	camera cam(eye,display_x,display_y);//display_x,display_y);
 	scenes scene;
-	ball light1(point(10,200,10),5,color(255,255,0),true);
+	ball light1(point(200,20,3),5,color(255,255,255),true);
 	scene.lights.push_back(&light1);
-	ball ball1(point(240,240,200),100,color(0,0,0),false);
-	
-//	ball ball2(point(400,400,200),100,color(0,0,0),false);
-//	scene.objects.push_back(&ball2);
+	ball ball1(point(130,130,200),50,color(255,0,0),false);
+	ball ball2(point(300,300,200),50,color(0,255,255),false);
+	scene.objects.push_back(&ball2);
 	scene.objects.push_back(&ball1);
 	scene.objects.push_back(&light1);
-	for(int i=0;i<480;i++)
-	{
-		for(int j=0;j<480;j++)
+	color** antialiase;
+	antialiase=new color*[display_x];
+	for(int i=0;i<display_x;i++)
+		antialiase[i]=new color[display_y];
+#pragma omp parallel for
+	for(int i=0;i<display_x;i++)
+		for(int j=0;j<display_y;j++)
 		{
-			//ray ra(point(i,j,0),vector3(0,0,1));
-			ray ra(eye,vector3(i-eye_x,j-eye_y,-eye_z));
-			*scene.fout<<"i="<<i<<" j="<<j;
-			color c=scene.trace(ra,1);
-			img.ptr<uchar>(i)[j*3]=c.number3;
-			img.ptr<uchar>(i)[j*3+1]=c.number2;
-			img.ptr<uchar>(i)[j*3+2]=c.number1;
-			//point* pointfirst=scene._rayintersect(ra,num);
+			paint(i,j,(scene.trace(ray(eye,vector3(i-0.5-eye_x,j-0.5-eye_y,-eye_z)),2)
+				+scene.trace(ray(eye,vector3(i-0.5-eye_x,j+0.5-eye_y,-eye_z)),2)
+				+scene.trace(ray(eye,vector3(i-0.5-eye_x,j-eye_y,-eye_z)),2)
+				+scene.trace(ray(eye,vector3(i-eye_x,j+0.5-eye_y,-eye_z)),2)
+				+scene.trace(ray(eye,vector3(i+0.5-eye_x,j-eye_y,-eye_z)),2)
+				+scene.trace(ray(eye,vector3(i-eye_x,j-0.5-eye_y,-eye_z)),2)
+				+scene.trace(ray(eye,vector3(i-eye_x,j-eye_y,-eye_z)),2)
+				+scene.trace(ray(eye,vector3(i+0.5-eye_x,j-0.5-eye_y,-eye_z)),2)
+				+scene.trace(ray(eye,vector3(i+0.5-eye_x,j+0.5-eye_y,-eye_z)),2))*(1.0/9));
 		}
-	}
 	//int a=0;
 	//cvCreateTrackbar("test","hah",&a,100);
 
