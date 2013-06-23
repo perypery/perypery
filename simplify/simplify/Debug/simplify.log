@@ -1,162 +1,12 @@
-﻿生成启动时间为 2013/6/23 0:52:57。
+﻿生成启动时间为 2013/6/23 15:58:32。
      1>项目“E:\users\perypery\documents\visual studio 2010\Projects\simplify\simplify\simplify.vcxproj”在节点 2 上(build 个目标)。
      1>InitializeBuildStatus:
          正在创建“Debug\simplify.unsuccessfulbuild”，因为已指定“AlwaysCreate”。
        ClCompile:
-         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\CL.exe /c /ZI /nologo /W3 /WX- /Od /Oy- /D _MBCS /Gm /EHsc /RTC1 /MDd /GS /fp:precise /Zc:wchar_t /Zc:forScope /Fo"Debug\\" /Fd"Debug\vc100.pdb" /Gd /TP /analyze- /errorReport:prompt glm.cpp simplify.cpp Matrix4.cpp Object.cpp Vector4.cpp
-         Vector4.cpp
-         Object.cpp
-         Matrix4.cpp
-         simplify.cpp
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\simplify.cpp(249): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : 参见“strcpy”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\simplify.cpp(250): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : 参见“strcpy”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\simplify.cpp(251): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-         glm.cpp
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(187): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(238) : 参见“strdup”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(234): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(238) : 参见“strdup”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(262): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : 参见“strcpy”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(263): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : 参见“strcat”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(266): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(276): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(285): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(316): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(238) : 参见“strdup”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(320): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(328): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(330): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(238) : 参见“strdup”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(333): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(344): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(350): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(356): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(389): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(105) : 参见“strcpy”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(390): warning C4996: 'strcat': This function or variable may be unsafe. Consider using strcat_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(110) : 参见“strcat”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(394): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(448): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(479): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(480): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(238) : 参见“strdup”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(499): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(503): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(504): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(505): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(508): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(512): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(514): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(515): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(518): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(522): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(524): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(525): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(528): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(534): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(535): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(538): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(599): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(611): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(618): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(624): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(631): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(647): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(651): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(654): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(657): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(662): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(672): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(677): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(681): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(687): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(700): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(704): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(707): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(712): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(724): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(726): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(728): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(732): warning C4996: 'fscanf': This function or variable may be unsafe. Consider using fscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(253) : 参见“fscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(1306): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(1315): warning C4996: 'strdup': The POSIX name for this item is deprecated. Instead, use the ISO C++ conformant name: _strdup. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\string.h(238) : 参见“strdup”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(1427): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(1789): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(234) : 参见“fopen”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(1810): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(1812): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-     1>e:\users\perypery\documents\visual studio 2010\projects\simplify\simplify\glm.cpp(1814): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
-                 d:\program files (x86)\microsoft visual studio 10.0\vc\include\stdio.h(325) : 参见“sscanf”的声明
-         正在生成代码...
+         所有输出均为最新。
        Link:
-         D:\Program Files (x86)\Microsoft Visual Studio 10.0\VC\bin\link.exe /ERRORREPORT:PROMPT /OUT:"E:\users\perypery\documents\visual studio 2010\Projects\simplify\Debug\simplify.exe" /NOLOGO kernel32.lib user32.lib gdi32.lib winspool.lib comdlg32.lib advapi32.lib shell32.lib ole32.lib oleaut32.lib uuid.lib odbc32.lib odbccp32.lib /MANIFEST /ManifestFile:"Debug\simplify.exe.intermediate.manifest" /MANIFESTUAC:"level='asInvoker' uiAccess='false'" /DEBUG /PDB:"E:\users\perypery\documents\visual studio 2010\Projects\simplify\Debug\simplify.pdb" /TLBID:1 /DYNAMICBASE /NXCOMPAT /IMPLIB:"E:\users\perypery\documents\visual studio 2010\Projects\simplify\Debug\simplify.lib" /MACHINE:X86 Debug\glm.obj
-         Debug\simplify.obj
-         Debug\Matrix4.obj
-         Debug\Object.obj
-         Debug\Vector4.obj
+         所有输出均为最新。
          simplify.vcxproj -> E:\users\perypery\documents\visual studio 2010\Projects\simplify\Debug\simplify.exe
-       Manifest:
-         C:\Program Files (x86)\Microsoft SDKs\Windows\v7.0A\bin\mt.exe /nologo /verbose /outputresource:"E:\users\perypery\documents\visual studio 2010\Projects\simplify\Debug\simplify.exe;#1" /manifest Debug\simplify.exe.intermediate.manifest
        FinalizeBuildStatus:
          正在删除文件“Debug\simplify.unsuccessfulbuild”。
          正在对“Debug\simplify.lastbuildstate”执行 Touch 任务。
@@ -164,4 +14,4 @@
 
 生成成功。
 
-已用时间 00:00:10.42
+已用时间 00:00:00.23

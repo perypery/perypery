@@ -2,10 +2,9 @@
 #include "Floor.h"
 
 
-Floor::Floor(double x,bool is_light)
+Floor::Floor(double x)
 {
 	height=x;
-	this->is_light=is_light;
 }
 double Floor::rayintersect(point&p,ray r,vector3& N,color& c)
 {

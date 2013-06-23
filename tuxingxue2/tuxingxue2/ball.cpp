@@ -4,12 +4,11 @@
 #include<iostream>
 using namespace std;
 
-ball::ball(point p,double r,color c,bool is_light)
+ball::ball(point p,double r,color c)
 {
 	ball_color=c;
 	center=p;
 	radius=r;
-	this->is_light=is_light;
 }
 
 double ball::rayintersect(point& p,ray r,vector3& N,color& c)//当返回的的确是个点的时候，distance是碰到的距离//distance是传入的最近距离，如果当前距离比这个距离要远，有交点就没有意义

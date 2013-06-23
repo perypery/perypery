@@ -7,7 +7,7 @@ class Floor:public _object
 {
 public:
 	double height;
-	Floor(double x,bool is_light);
+	Floor(double x);
 	double rayintersect(point&p,ray r,vector3& N,color& c);
 };
 #endif

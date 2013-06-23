@@ -8,45 +8,69 @@ Triangle::Triangle()
 	
 }
 
-Triangle::Triangle(point a,point b,point c,color tc,bool is_light)
+Triangle::Triangle(point a,point b,point c,color tc)
 {
 	//fout2=new ofstream("test2.txt");
 	v0=a;
 	v1=b;
 	v2=c;
 	triangle_color=tc;
-	this->is_light=is_light;
 }
-double Triangle::rayintersect(point& p,ray r,vector3& N,color& c)
+double Triangle::rayintersect(point& pp,ray r,vector3& N,color& cc)    //ÐèÒªÐÞ¸Ä
 {
 	
-	c=triangle_color;
-	vector3 edge1,edge2,tvec,pvec,qvec;
-	double det;
-	double u,v,t;
-	edge1=vector3(v1.x-v0.x,v1.y-v0.y,v1.z-v0.z);
-	edge2=vector3(v2.x-v0.x,v2.y-v0.y,v2.z-v0.z);
-	pvec=r.ray_vector.cross(edge2);
-	det=edge1*pvec;
-	if(det<1e-2)
+	cc=triangle_color;
+	double a=v0.x-v1.x,b=v0.x-v2.x,c=r.ray_vector.x,d=v0.x-r.vertex.x;
+	double e=v0.y-v1.y,f=v0.y-v2.y,g=r.ray_vector.y,h=v0.y-r.vertex.y;
+	double i=v0.z-v1.z,j=v0.z-v2.z,k=r.ray_vector.z,l=v0.z-r.vertex.z;
+	double m=f*k-g*j,n=h*k-g*l,p=f*l-h*j;
+	double q=g*i-e*k,s=e*j-f*i;
+	double inv_denom=1.0/(a*m+b*q+c*s);
+	double e1=d*m-b*n-c*p;
+	double beta=e1*inv_denom;
+	if(beta<1e-6)
+	{
+		*fout2<<" first";
 		return 1e10;
-	tvec=vector3(r.vertex.x-v0.x,r.vertex.y-v0.y,r.vertex.z-v0.z);
-	u=tvec*pvec;
-	if(u<1e-2||u>det)
+	}
+	double rr=e*l-h*i;
+	double e2=a*n+d*q+c*rr;
+	double gamma=e2*inv_denom;
+	if(gamma<1e-6)
+	{
+		*fout2<<" second";
 		return 1e10;
-	qvec=tvec.cross(edge1);
-	v=r.ray_vector*qvec;
-	if(v<1e-2||u+v>det)
+	}
+	if(beta+gamma>1)
+	{
+		*fout2<<" third";
 		return 1e10;
-	t=edge2*qvec;
-	t/=det;
-	u/=det;
-	v/=det;
-	N=edge1.cross(edge2);
-	p=point(r.vertex.x+t*r.ray_vector.x,r.vertex.y+t*r.ray_vector.y,r.vertex.z+t*r.ray_vector.z);
-	*fout2<<" p="<<p;
-	*fout2<<" N="<<N;
+	}
+	double e3=a*p-b*rr+d*s;
+	double t=e3*inv_denom;
+	if(t<1e-6)
+	{
+		*fout2<<" fourth";
+		return 1e10;
+	}
+	pp=point(r.vertex.x+t*r.ray_vector.x,r.vertex.y+t*r.ray_vector.y,r.vertex.z+t*r.ray_vector.z);
+	vector3 edge1,edge2;
+	edge1=vector3(v0.x-v1.x,v0.y-v1.y,v0.z-v1.z);
+	edge2=vector3(v0.x-v2.x,v0.y-v2.y,v0.z-v2.z);
+	N=edge1.cross(edge2)*-1;
 	return t;
+	//vector3 edge1,edge2,dd;
+	//double det;
+	//double u,v,t;
+	//edge1=vector3(v0.x-v1.x,v0.y-v1.y,v0.z-v1.z);
+	//edge2=vector3(v0.x-v2.x,v0.y-v2.y,v0.z-v2.z);
+	//dd=vector3(v0.x-r.vertex.x,v0.y-r.vertex.y,v0.z-r.vertex.z);
+	//double m=
+
+	//p=point(r.vertex.x+t*r.ray_vector.x,r.vertex.y+t*r.ray_vector.y,r.vertex.z+t*r.ray_vector.z);
+	//*fout2<<" p="<<p;
+	//*fout2<<" N="<<N;
+	//return t;
 }
 
 Triangle::~Triangle(void)

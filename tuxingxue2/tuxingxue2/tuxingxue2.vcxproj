@@ -84,8 +84,10 @@
     <ClInclude Include="ball.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="color.h" />
+    <ClInclude Include="cuboid.h" />
     <ClInclude Include="floor.h" />
     <ClInclude Include="point.h" />
+    <ClInclude Include="poly4.h" />
     <ClInclude Include="ray.h" />
     <ClInclude Include="scenes.h" />
     <ClInclude Include="stdafx.h" />
@@ -98,7 +100,9 @@
     <ClCompile Include="ball.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="color.cpp" />
+    <ClCompile Include="cuboid.cpp" />
     <ClCompile Include="floor.cpp" />
+    <ClCompile Include="poly4.cpp" />
     <ClCompile Include="Triangle.cpp" />
     <ClCompile Include="_object.cpp" />
     <ClCompile Include="point.cpp" />

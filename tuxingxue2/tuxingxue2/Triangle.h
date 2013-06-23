@@ -12,7 +12,7 @@ public:
 	point v0,v1,v2;
 	color triangle_color;
 	Triangle();
-	Triangle(point a,point b,point c,color tc,bool is_light);
+	Triangle(point a,point b,point c,color tc);
 	double rayintersect(point& p,ray r,vector3& N,color& c);
 	//Triangle(void);
 	~Triangle(void);
